@@ -1,0 +1,102 @@
+﻿@model MEExpress.Domain.PedidoListViewModel
+@using MeExpress.Domain;
+
+@{
+    ViewBag.Title = "PedidoPorStatus";
+}
+
+@{ 
+    string titulo = null;
+    switch (Model.Status)
+    {
+        case MeExpress.Domain.PedidoStatus.Solicitado:
+            titulo = "Pedidos Solicitados";
+            break;
+        case MeExpress.Domain.PedidoStatus.EmProducao:
+            titulo = "Pedidos Em Produção";
+            break;
+        case MeExpress.Domain.PedidoStatus.Produzido:
+            titulo = "Pedidos Produzidos";
+            break;
+        case MeExpress.Domain.PedidoStatus.EmTransporte:
+            titulo = "Pedidos Em Transporte";
+            break;
+        case MeExpress.Domain.PedidoStatus.Entregue:
+            titulo = "Pedidos Entregues";
+            break;
+    }
+}
+<h2>@titulo</h2>
+
+<table class="table">
+    @foreach (var pedido in Model.PedidoList)
+    {
+        <tr style="background-color:#ddd">
+            <th># Pedido</th>
+            <th>Cliente</th>
+            <th>Data Solicitação</th>
+            <th>Hora</th>
+        </tr>
+        <tr>
+            <td>@pedido.Numero</td>
+            <td>@pedido.Cliente.Nome</td>
+            <td>@pedido.DataSolicitado.ToShortDateString()</td>
+            <td>@pedido.DataSolicitado.ToShortTimeString()</td>
+        </tr>
+        if(Model.Status == PedidoStatus.Produzido)
+        {
+            <tr>
+                <td colspan="4">
+                    @pedido.Cliente.Nome <br />
+                    @pedido.Cliente.Endereco, @pedido.Cliente.Numero @pedido.Cliente.Complemento <br />
+                    @pedido.Cliente.Bairro <br />
+                    @pedido.Cliente.Cidade, @pedido.Cliente.Estado
+                </td>   
+            </tr>
+        }
+        <tr>
+            <td colspan="4">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Quantidade</th>
+                        <th>Produto</th>
+                    </tr>
+                    @foreach (var item in pedido.ProdutoList)
+                    {
+                        <tr>
+                            <td>@item.Quantidade</td>
+                            <td>@item.Produto.Nome</td>
+                        </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding-bottom:60px">
+                @{
+                    switch (Model.Status)
+                    {
+                        case MeExpress.Domain.PedidoStatus.Solicitado:
+                            <a href='@Url.Action("PedidoAlterarStatus", new { pedidoId = pedido.Id, status = PedidoStatus.EmProducao })'>Iniciar Produção</a>
+                            break;
+                        case MeExpress.Domain.PedidoStatus.EmProducao:
+                            <a href='@Url.Action("PedidoAlterarStatus", new { pedidoId = pedido.Id, status = PedidoStatus.Produzido })'>Produção Completa</a>
+                            break;
+                        case MeExpress.Domain.PedidoStatus.Produzido:
+                            <a href='@Url.Action("PedidoAlterarStatus", new { pedidoId = pedido.Id, status = PedidoStatus.EmTransporte })'>Iniciar Entrega</a>
+                            break;
+                        case MeExpress.Domain.PedidoStatus.EmTransporte:
+                            <a href='@Url.Action("PedidoAlterarStatus", new { pedidoId = pedido.Id, status = PedidoStatus.Entregue })'>Produto Entregue</a>
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+            </td>
+        </tr>
+    }
+</table>

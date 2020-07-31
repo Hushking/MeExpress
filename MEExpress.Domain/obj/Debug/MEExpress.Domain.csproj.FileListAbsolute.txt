@@ -1,0 +1,5 @@
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Domain\bin\Debug\MEExpress.Domain.dll
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Domain\bin\Debug\MEExpress.Domain.pdb
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Domain\obj\Debug\MEExpress.Domain.dll
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Domain\obj\Debug\MEExpress.Domain.pdb
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Domain\obj\Debug\MeExpress.Domain.csprojAssemblyReference.cache

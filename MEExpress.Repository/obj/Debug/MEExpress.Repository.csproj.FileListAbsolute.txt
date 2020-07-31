@@ -1,0 +1,10 @@
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\bin\Debug\MEExpress.Repository.dll
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\bin\Debug\MEExpress.Repository.pdb
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\bin\Debug\Dapper.dll
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\bin\Debug\MEExpress.Domain.dll
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\bin\Debug\MEExpress.Domain.pdb
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\bin\Debug\Dapper.xml
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\obj\Debug\MEExpress.Repository.csprojAssemblyReference.cache
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\obj\Debug\MEExpress.Repository.csproj.CopyComplete
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\obj\Debug\MEExpress.Repository.dll
+C:\Users\lucas\source\repos\MEExpress\MEExpress.Repository\obj\Debug\MEExpress.Repository.pdb

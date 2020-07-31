@@ -1,0 +1,8 @@
+C:\Users\lucas\source\repos\MEExpress\MeExpress.ApplicationServices\bin\Debug\MeExpress.ApplicationServices.dll
+C:\Users\lucas\source\repos\MEExpress\MeExpress.ApplicationServices\bin\Debug\MeExpress.ApplicationServices.pdb
+C:\Users\lucas\source\repos\MEExpress\MeExpress.ApplicationServices\bin\Debug\MEExpress.Domain.dll
+C:\Users\lucas\source\repos\MEExpress\MeExpress.ApplicationServices\bin\Debug\MEExpress.Domain.pdb
+C:\Users\lucas\source\repos\MEExpress\MeExpress.ApplicationServices\obj\Debug\MeExpress.ApplicationServices.csprojAssemblyReference.cache
+C:\Users\lucas\source\repos\MEExpress\MeExpress.ApplicationServices\obj\Debug\MeExpress.ApplicationServices.csproj.CopyComplete
+C:\Users\lucas\source\repos\MEExpress\MeExpress.ApplicationServices\obj\Debug\MeExpress.ApplicationServices.dll
+C:\Users\lucas\source\repos\MEExpress\MeExpress.ApplicationServices\obj\Debug\MeExpress.ApplicationServices.pdb
